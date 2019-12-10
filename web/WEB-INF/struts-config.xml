@@ -11,11 +11,11 @@
     </form-beans>
 
     <action-mappings>
-        <action path="/todo" name="todoForm" type="com.mohannad.action.TodoAction" input="/addtodo.jsp">
-            <forward name="success" path="addtodo.jsp"/>
+        <action path="/addTodo" name="todoForm" type="com.mohannad.action.ForwardAction" input="/addtodo.jsp">
+            <forward name="success" path="/addtodo.jsp"/>
         </action>
 
-        <action path="/addTodo" name="todoForm" type="com.mohannad.action.TodoAction" input="/addtodo.jsp"
+        <action path="/todos" name="todoForm" type="com.mohannad.action.TodoAction" input="/addtodo.jsp"
                 validate="true">
             <forward name="success" path="/todos.jsp"/>
         </action>
