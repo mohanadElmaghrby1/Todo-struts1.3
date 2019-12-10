@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts-config PUBLIC
+        "-//Apache Software Foundation//DTD Struts Configuration 1.3//EN"
+        "http://struts.apache.org/dtds/struts-config_1_3.dtd">
+
+<struts-config>
+
+    <form-beans>
+        <form-bean name="todoForm" type="com.mohannad.form.TodoForm"></form-bean>
+    </form-beans>
+
+    <action-mappings>
+        <action path="/todo" name="todoForm" type="com.mohannad.action.TodoAction" input="/addtodo.jsp">
+            <forward name="success" path="addtodo.jsp"/>
+        </action>
+
+        <action path="/addTodo" name="todoForm" type="com.mohannad.action.TodoAction" input="/addtodo.jsp"
+                validate="true">
+            <forward name="success" path="/todos.jsp"/>
+        </action>
+
+    </action-mappings>
+    <message-resources
+            parameter="com.mohannad.i18n.MessageBundle">
+    </message-resources>
+</struts-config>
