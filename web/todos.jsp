@@ -9,5 +9,10 @@
 <% for(int i = 0 ; i <10 ; ++i){
 	out.write(i+"\n");
 } %>
+<br/>
+Content : <bean:write name="todoForm" property="content"/>
+<br/>
+Date : <bean:write name="todoForm" property="date"/>
+
 </body>
 </html>
